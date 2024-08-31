@@ -1,6 +1,8 @@
-# Welcome to your Expo app 👋
+# Aplicativo construído com o intuito de masterizar a contrução de APPs mobile e React Native
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Estarei usando nesse projeto também algumas bilbiotecas 
+- NativeWind (Tailwind para aplicações nativas)
+- Shadcn 
 
 ## Get started
 
