@@ -1,21 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Header } from '../components/Header';
+import { Banner } from '../components/Banner'
+import Constants from 'expo-constants';
 import '../styles/input.css'
+
+const statusBarHeight = Constants.statusBarHeight;
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text className='text-xl text-red-500'>Oi</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView style={{ flex: 1}} className='bg-slate-200' showsVerticalScrollIndicator={false}>
+		<View className='w-full px-1' style={{ marginTop: statusBarHeight + 8}}>
+
+			<Header/>
+			<Banner/>
+			
+		</View>		
+    </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//   },
+// });
