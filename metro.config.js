@@ -1,18 +1,6 @@
-const { getDefaultConfig } = require('expo/metro-config');
-const path = require('path');
+const { getDefaultConfig } = require("expo/metro-config");
+const { withNativeWind } = require('nativewind/metro');
 
-const config = getDefaultConfig(__dirname);
+const config = getDefaultConfig(__dirname)
 
-config.resolver.resolveRequest = (context, moduleName, platform) => {  
-  console.log('Resolving module:', moduleName);
-
-  if (moduleName.startsWith('my-custom-resolver:')) {
-    return {      
-      filePath: path.join(__dirname, 'path/to/custom', moduleName.replace('my-custom-resolver:', '')),
-      type: 'sourceFile',
-    };
-  }  
-  return context.resolveRequest(context, moduleName, platform);
-};
-
-module.exports = config;
+module.exports = withNativeWind(config, { input: './src/styles/global.css' })
