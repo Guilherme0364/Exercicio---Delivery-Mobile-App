@@ -1,0 +1,33 @@
+{
+  "name": "delivery-app",
+  "version": "1.0.0",
+  "main": "expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "build:css": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~3.2.3",
+    "@types/react": "~18.2.79",
+    "expo": "~51.0.28",
+    "expo-router": "^3.5.23",
+    "expo-status-bar": "~1.12.1",
+    "nativewind": "^2.0.11",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-web": "~0.19.10",
+    "typescript": "~5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react-native": "^0.73.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.43",
+    "tailwindcss": "^3.3.2"
+  },
+  "private": true
+}
